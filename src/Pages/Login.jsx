@@ -1,4 +1,4 @@
-import {Login as Log} from '../Components/Index'
+import {Login as Log} from '../Components/index'
 function Login() {
   return (
     <div className='py-8'>

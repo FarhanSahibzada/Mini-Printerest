@@ -1,4 +1,4 @@
-import {Signup as Sign } from '../Components/Index'
+import {Signup as Sign } from '../Components/index'
 
 function Signup() {
   return (
