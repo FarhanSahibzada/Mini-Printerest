@@ -33,7 +33,7 @@ export default function PostCard() {
     }
 
     return post ? (
-        <div className="w-[80vw] h-auto shadow-2xl   bg-base-100 m-12 p-4 rounded-xl ">
+        <div className="w-[80vw] h-auto shadow-2xl   bg-base-100 m-12 p-4 rounded-xl relative ">
             <div>
                 <div className="flex justify-around  flex-col md:flex-row gap-6  w-full h-[50vh] md:h-[70vh] relative">
                     <div className="h-full " >
