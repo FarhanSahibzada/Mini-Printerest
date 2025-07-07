@@ -15,6 +15,7 @@ function App() {
     setLoading(true)
     authService.getCurrentUser()
       .then((userData) => {
+     
         if (userData) {
           dispatch(login({ userData }))
         } else {

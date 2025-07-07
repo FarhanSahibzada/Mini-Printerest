@@ -71,7 +71,7 @@ export class Service {
                 conf.Collectionid,
                 slug
             )
-
+            
             return result
         } catch (error) {
             console.log(error)
@@ -79,16 +79,19 @@ export class Service {
         }
 
     }
-
+    
     async getDocments() {
         try {
-            return await this.Databases.listDocuments(
+            const documents =  await this.Databases.listDocuments(
                 conf.Databaseid,
                 conf.Collectionid,
+
                 [
                     Query.equal('Status', 'Active')
                 ]
             )
+           
+            return documents
 
         } catch (error) {
             console.error("Error fetching documents:", error)
@@ -141,7 +144,7 @@ export class Service {
     }
 
     Getfilepreview(fileid) {
-        return this.bucket.getFilePreview(
+        return this.bucket.getFileView(
             conf.Bucketid,
             fileid,
         )
